@@ -8,8 +8,9 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "flockingbird-swift",
-            targets: [ "ObjCFlockingbird", "flockingbird-swift"]),
+          name: "Flockingbird",
+          type: .static,
+          targets: [ "ObjCFlockingbird", "Flockingbird"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,12 +27,12 @@ let package = Package(
             ]
         ),
         .target(
-            name: "flockingbird-swift",
+            name: "Flockingbird",
             dependencies: ["ObjCFlockingbird"],
             path: "Sources/Swift"
         ),
         .testTarget(
             name: "flockingbird-swiftTests",
-            dependencies: ["flockingbird-swift"]),
+            dependencies: ["Flockingbird"]),
     ]
 )

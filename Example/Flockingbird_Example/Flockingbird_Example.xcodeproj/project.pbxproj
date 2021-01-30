@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59C5DBD025C5B4AC009F29E9 /* flockingbird-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 59C5DBCF25C5B4AC009F29E9 /* flockingbird-swift */; };
 		59D89FB825C5B374007921C1 /* Flockingbird_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D89FB725C5B374007921C1 /* Flockingbird_ExampleApp.swift */; };
 		59D89FBA25C5B374007921C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D89FB925C5B374007921C1 /* ContentView.swift */; };
 		59D89FBC25C5B376007921C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D89FBB25C5B376007921C1 /* Assets.xcassets */; };
 		59D89FBF25C5B376007921C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D89FBE25C5B376007921C1 /* Preview Assets.xcassets */; };
+		59F84B6E25C5F4F70085086F /* Flockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 59F84B6D25C5F4F70085086F /* Flockingbird */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C5DBD025C5B4AC009F29E9 /* flockingbird-swift in Frameworks */,
+				59F84B6E25C5F4F70085086F /* Flockingbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			);
 			name = Flockingbird_Example;
 			packageProductDependencies = (
-				59C5DBCF25C5B4AC009F29E9 /* flockingbird-swift */,
+				59F84B6D25C5F4F70085086F /* Flockingbird */,
 			);
 			productName = Flockingbird_Example;
 			productReference = 59D89FB425C5B374007921C1 /* Flockingbird_Example.app */;
@@ -343,9 +343,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		59C5DBCF25C5B4AC009F29E9 /* flockingbird-swift */ = {
+		59F84B6D25C5F4F70085086F /* Flockingbird */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "flockingbird-swift";
+			productName = Flockingbird;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
