@@ -1,3 +1,12 @@
 # flockingbird-swift
+setup
+```bash
+git submodule init
+git submodule update
+```
 
-A description of this package.
+
+build
+```bash
+swift build
+```
