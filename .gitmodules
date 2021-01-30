@@ -1,0 +1,3 @@
+[submodule "Sources/CPP"]
+	path = Sources/CPP
+	url = git@github.com:falcowinkler/flockingbird.git
