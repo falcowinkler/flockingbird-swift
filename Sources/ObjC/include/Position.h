@@ -1,9 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "Boid.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Flock : NSObject
-@property NSSet<Boid*>* boids;
+@interface Position : NSObject
+@property double x;
+@property double y;
 @end
 
 NS_ASSUME_NONNULL_END
