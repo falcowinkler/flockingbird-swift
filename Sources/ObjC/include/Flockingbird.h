@@ -5,6 +5,7 @@
 
 @interface Flockingbird: NSObject
 @property (nonatomic, strong) Flock* currentFlock;
+- (void) step;
 @end
 
 #endif /* Header_h */
