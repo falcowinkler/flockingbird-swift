@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "Flockingbird.h"
-#import "../CPP/src/flockingbird.h"
+#import "../../CPP/src/flockingbird.h"
 
 using CFlock = FlockSimulation :: Flock;
 
@@ -19,7 +19,17 @@ using CFlock = FlockSimulation :: Flock;
 }
 
 - (Flock*) currentFlock {
-    return [[Flock alloc] init];
+
+    NSMutableSet<Boid*> *flockSet = [[NSMutableSet alloc] init];
+    for (int i = 0; i < _cflock.boids.size(); i++) {
+        FlockSimulation::Boid boid = _cflock.boids[i];
+        [flockSet addObject:
+         [[Boid alloc]
+          initWithPosition:
+          [[Position alloc]
+           initWithX:boid.position.x y:boid.position.y] bearing:boid.bearing]];
+    }
+    return [[Flock alloc] initWithBoids:flockSet];
 };
 - (void) step {
     // advance the simulation by one timestep
