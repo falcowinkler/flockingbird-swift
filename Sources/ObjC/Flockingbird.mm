@@ -12,7 +12,7 @@ using CFlock = FlockSimulation :: Flock;
 
 @implementation Flockingbird
 
-- (id) initWithNumberOfBoids:(int) numberOfBoids {
+- (instancetype) initWithNumberOfBoids:(int) numberOfBoids {
     self = [super init];
     _cflock = CFlock(numberOfBoids);
     return self;
