@@ -1,15 +1,13 @@
 #import <Foundation/Foundation.h>
-#import "Flockingbird.h"
-#import "../../CPP/src/flockingbird.h"
+#import "FlockSimulation.h"
 
-@interface Flockingbird ()
-
+@interface FlockSimulation ()
 
 @end
 
-@implementation Flockingbird
+@implementation FlockSimulation
 
-- (instancetype) initWithNumberOfBoids:(int) numberOfBoids {
+- (instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int)maxX maxY:(int)maxY {
     self = [super init];
     return self;
 }

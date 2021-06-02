@@ -1,16 +1,16 @@
 #import "Flock.h"
 #import <Foundation/Foundation.h>
-#import "Flockingbird.h"
+#import "FlockSimulation.h"
 #import "Boid.h"
+#include "../CPP/src/flockingbird.hpp"
 
 @interface Flock ()
 @end
 
 @implementation Flock
 
-- (instancetype)initWithBoids:(NSSet<Boid *> *)boids {
+- (instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY {
     self = [super init];
-    self.boids = boids;
     return self;
 }
 

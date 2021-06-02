@@ -33,7 +33,7 @@ let package = Package(
         ),
         .testTarget(
             name: "flockingbird-swiftTests",
-            dependencies: ["Flockingbird"]),
+            dependencies: ["Flockingbird"])
     ],
-    cxxLanguageStandard: .cxx11
+    cxxLanguageStandard: .gnucxx11
 )

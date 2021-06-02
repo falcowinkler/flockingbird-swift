@@ -1,6 +1,6 @@
-#import "Position.h"
+#import "Vector.h"
 
-@implementation Position
+@implementation Vector
 - (instancetype) initWithX: (double) x y:(double) y {
     self = [super init];
     self.x = x;

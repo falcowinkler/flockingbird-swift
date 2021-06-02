@@ -3,9 +3,9 @@ import XCTest
 
 final class flockingbird_swiftTests: XCTestCase {
     func testDefaultInitializer() {
-        XCTAssertEqual(Flockingbird().currentFlock.boids, Set<Boid>())
+        XCTAssertEqual(FlockSimulation().currentFlock.boids, Set<Boid>())
     }
     func testRandomNumberOfBoidsInitializer() {
-        XCTAssertEqual(Flockingbird(numberOfBoids: 10).currentFlock.boids.count, 10)
+        XCTAssertEqual(FlockSimulation(numberOfBoids: 10, maxX: 1024, maxY: 600).currentFlock.boids.count, 10)
     }
 }

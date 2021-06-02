@@ -1,11 +1,11 @@
 #import "Boid.h"
-#import "Position.h"
+#import "Vector.h"
 
 @implementation Boid
-- (instancetype)initWithPosition:(Position*) position bearing:(double)bearing {
+- (instancetype)initWithPosition:(Vector*) position velocity:(Vector*)velocity {
     self = [super init];
     self.position = position;
-    self.bearing = bearing;
+    self.velocity = velocity;
     return self;
 }
 @end

@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Position : NSObject
+@interface Vector : NSObject
 @property double x;
 @property double y;
 - (instancetype) initWithX: (double) x y:(double) y;
