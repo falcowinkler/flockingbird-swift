@@ -23,7 +23,8 @@ let package = Package(
             name: "ObjCFlockingbird",
             path: "Sources/ObjC",
             cxxSettings: [
-                .headerSearchPath("../CPP/")
+                .headerSearchPath("../CPP/"),
+                .unsafeFlags(["-O3"])
             ]
         ),
         .target(

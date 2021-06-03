@@ -2,27 +2,27 @@
 #define FlockSimulationParameters_h
 
 @interface FlockSimulationParameters : NSObject
-@property (nonatomic) double speedLimit;
-@property (nonatomic) double forceLimit;
-@property (nonatomic) double positionIncrementScalingFactor;
-@property (nonatomic) double avoidanceRadius;
-@property (nonatomic) double visionRange;
-@property (nonatomic) double separationWeight;
-@property (nonatomic) double alignmentWeight;
-@property (nonatomic) double cohesionWeight;
-@property (nonatomic) double maxX;
-@property (nonatomic) double maxY;
+@property (nonatomic) float speedLimit;
+@property (nonatomic) float forceLimit;
+@property (nonatomic) float positionIncrementScalingFactor;
+@property (nonatomic) float avoidanceRadius;
+@property (nonatomic) float visionRange;
+@property (nonatomic) float separationWeight;
+@property (nonatomic) float alignmentWeight;
+@property (nonatomic) float cohesionWeight;
+@property (nonatomic) float maxX;
+@property (nonatomic) float maxY;
 
-- (nonnull instancetype) initWithSpeedLimit:(double) speedLimit
-                         forceLimit:(double) forceLimit
-     positionIncrementScalingFactor:(double) positionIncrementScalingFactor
-                    avoidanceRadius:(double) avoidanceRadius
-                        visionRange:(double) visionRange
-                   separationWeight:(double) separationWeight
-                    alignmentWeight:(double) alignmentWeight
-                     cohesionWeight:(double) cohesionWeight
-                               maxX:(double) maxX
-                               maxY:(double) maxY;
+- (nonnull instancetype) initWithSpeedLimit:(float) speedLimit
+                         forceLimit:(float) forceLimit
+     positionIncrementScalingFactor:(float) positionIncrementScalingFactor
+                    avoidanceRadius:(float) avoidanceRadius
+                        visionRange:(float) visionRange
+                   separationWeight:(float) separationWeight
+                    alignmentWeight:(float) alignmentWeight
+                     cohesionWeight:(float) cohesionWeight
+                               maxX:(float) maxX
+                               maxY:(float) maxY;
 - (nonnull instancetype) init;
 - (nonnull instancetype) initFromDict:(nonnull NSDictionary*) dict;
 @end

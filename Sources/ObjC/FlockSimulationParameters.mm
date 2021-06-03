@@ -1,16 +1,16 @@
 #import <Foundation/Foundation.h>
 #import "FlockSimulationParameters.h"
 @implementation FlockSimulationParameters
-- (instancetype) initWithSpeedLimit:(double) speedLimit
-                         forceLimit:(double) forceLimit
-     positionIncrementScalingFactor:(double) positionIncrementScalingFactor
-                    avoidanceRadius:(double) avoidanceRadius
-                        visionRange:(double) visionRange
-                   separationWeight:(double) separationWeight
-                    alignmentWeight:(double) alignmentWeight
-                     cohesionWeight:(double) cohesionWeight
-                               maxX:(double) maxX
-                               maxY:(double) maxY {
+- (instancetype) initWithSpeedLimit:(float) speedLimit
+                         forceLimit:(float) forceLimit
+     positionIncrementScalingFactor:(float) positionIncrementScalingFactor
+                    avoidanceRadius:(float) avoidanceRadius
+                        visionRange:(float) visionRange
+                   separationWeight:(float) separationWeight
+                    alignmentWeight:(float) alignmentWeight
+                     cohesionWeight:(float) cohesionWeight
+                               maxX:(float) maxX
+                               maxY:(float) maxY {
     self = [super init];
     self.speedLimit = speedLimit;
     self.forceLimit = forceLimit;
@@ -45,63 +45,63 @@
     self = [super init];
     NSNumber* speedLimit = dict[@"speedLimit"];
     if (!speedLimit) {
-        speedLimit = [[NSNumber alloc] initWithDouble: 5];
+        speedLimit = [[NSNumber alloc] initWithFloat: 5];
     }
-    self.speedLimit = [speedLimit doubleValue];
+    self.speedLimit = [speedLimit floatValue];
 
     NSNumber* forceLimit = dict[@"forceLimit"];
     if (!forceLimit) {
-        forceLimit = [[NSNumber alloc] initWithDouble: 0.03];
+        forceLimit = [[NSNumber alloc] initWithFloat: 0.03];
     }
-    self.forceLimit = [forceLimit doubleValue];
+    self.forceLimit = [forceLimit floatValue];
 
     NSNumber* positionIncrementScalingFactor = dict[@"positionIncrementScalingFactor"];
     if (!positionIncrementScalingFactor) {
-        positionIncrementScalingFactor = [[NSNumber alloc] initWithDouble: 1];
+        positionIncrementScalingFactor = [[NSNumber alloc] initWithFloat: 1];
     }
-    self.positionIncrementScalingFactor = [positionIncrementScalingFactor doubleValue];
+    self.positionIncrementScalingFactor = [positionIncrementScalingFactor floatValue];
 
     NSNumber* avoidanceRadius = dict[@"avoidanceRadius"];
     if (!avoidanceRadius) {
-        avoidanceRadius = [[NSNumber alloc] initWithDouble: 25];
+        avoidanceRadius = [[NSNumber alloc] initWithFloat: 25];
     }
-    self.avoidanceRadius = [avoidanceRadius doubleValue];
+    self.avoidanceRadius = [avoidanceRadius floatValue];
 
     NSNumber* visionRange = dict[@"visionRange"];
     if (!visionRange) {
-        visionRange = [[NSNumber alloc] initWithDouble: 100];
+        visionRange = [[NSNumber alloc] initWithFloat: 100];
     }
-    self.visionRange = [visionRange doubleValue];
+    self.visionRange = [visionRange floatValue];
 
     NSNumber* separationWeight = dict[@"separationWeight"];
     if (!separationWeight) {
-        separationWeight = [[NSNumber alloc] initWithDouble: 1.5];
+        separationWeight = [[NSNumber alloc] initWithFloat: 1.5];
     }
-    self.separationWeight = [separationWeight doubleValue];
+    self.separationWeight = [separationWeight floatValue];
 
     NSNumber* alignmentWeight = dict[@"alignmentWeight"];
     if (!alignmentWeight) {
-        alignmentWeight = [[NSNumber alloc] initWithDouble: 1];
+        alignmentWeight = [[NSNumber alloc] initWithFloat: 1];
     }
-    self.alignmentWeight = [alignmentWeight doubleValue];
+    self.alignmentWeight = [alignmentWeight floatValue];
 
     NSNumber* cohesionWeight = dict[@"cohesionWeight"];
     if (!cohesionWeight) {
-        cohesionWeight = [[NSNumber alloc] initWithDouble: 1];
+        cohesionWeight = [[NSNumber alloc] initWithFloat: 1];
     }
-    self.cohesionWeight = [cohesionWeight doubleValue];
+    self.cohesionWeight = [cohesionWeight floatValue];
 
     NSNumber* maxX = dict[@"maxX"];
     if (!maxX) {
-        maxX = [[NSNumber alloc] initWithDouble: -1];
+        maxX = [[NSNumber alloc] initWithFloat: -1];
     }
-    self.maxX = [maxX doubleValue];
+    self.maxX = [maxX floatValue];
 
     NSNumber* maxY = dict[@"maxY"];
     if (!maxY) {
-        maxY = [[NSNumber alloc] initWithDouble: -1];
+        maxY = [[NSNumber alloc] initWithFloat: -1];
     }
-    self.maxY = [maxY doubleValue];
+    self.maxY = [maxY floatValue];
     return self;
 }
 
