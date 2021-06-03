@@ -2,10 +2,13 @@
 #define FlockSimulation_h
 #import <Foundation/Foundation.h>
 #include "Flock.h"
+#include "FlockSimulationParameters.h"
+
 @interface FlockSimulation: NSObject
-@property (nonatomic, strong) Flock* currentFlock;
+@property (nonatomic, strong, nonnull) Flock* currentFlock;
 - (void) step;
-- (instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY;
+- (nonnull instancetype) initWithFlock:(nonnull Flock*) flock
+          simulationParameters:(nonnull FlockSimulationParameters*) parameters;
 @end
 
 #endif /* FlockSimulation */

@@ -2,7 +2,7 @@
 #import "Vector.h"
 
 @implementation Boid
-- (instancetype)initWithPosition:(Vector*) position velocity:(Vector*)velocity {
+- (instancetype)initWithPosition:(nonnull Vector*) position velocity:(nonnull Vector*)velocity {
     self = [super init];
     self.position = position;
     self.velocity = velocity;

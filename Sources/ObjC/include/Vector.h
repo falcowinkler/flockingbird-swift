@@ -3,8 +3,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Vector : NSObject
-@property double x;
-@property double y;
+@property (nonatomic) double x;
+@property (nonatomic) double y;
 - (instancetype) initWithX: (double) x y:(double) y;
 @end
 
