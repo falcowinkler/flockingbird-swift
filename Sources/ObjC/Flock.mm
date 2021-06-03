@@ -13,7 +13,9 @@ using CBoid = flockingbird :: Boid;
 @implementation Flock
 
 - (instancetype) init {
+    self = [super init];
     self.boids = [[NSSet alloc] init];
+    return self;
 }
 
 - (instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY {
