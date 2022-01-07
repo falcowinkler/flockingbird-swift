@@ -14,14 +14,14 @@ using CBoid = flockingbird :: Boid;
 
 - (instancetype) init {
     self = [super init];
-    self.boids = [[NSSet alloc] init];
+    self.boids = [[NSArray alloc] init];
     return self;
 }
 
 - (instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY {
     self = [super init];
     CFlock cFlock = CFlock(numberOfBoids, maxX, maxY);
-    NSMutableSet<Boid*> *boids = [[NSMutableSet alloc] init];
+    NSMutableArray<Boid*> *boids = [[NSMutableArray alloc] init];
     for (CBoid cBoid: cFlock.boids) {
         Boid *boid = [[Boid alloc]
                      initWithPosition:
@@ -36,7 +36,7 @@ using CBoid = flockingbird :: Boid;
     return self;
 }
 
-- (instancetype) initWithBoids:(NSSet<Boid*>*) boids {
+- (instancetype) initWithBoids:(NSArray<Boid*>*) boids {
     self = [super init];
     self.boids = boids;
     return self;

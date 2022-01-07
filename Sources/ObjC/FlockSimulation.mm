@@ -27,7 +27,7 @@ using CVector = Vector2D;
 }
 
 - (Flock*) currentFlock {
-    NSMutableSet<Boid*> *boids = [[NSMutableSet alloc] init];
+    NSMutableArray<Boid*> *boids = [[NSMutableArray alloc] init];
     for (CBoid cBoid: self.cFlockingSimulation->flock.boids) {
         Boid *boid = [[Boid alloc]
                       initWithPosition:
@@ -42,7 +42,6 @@ using CVector = Vector2D;
 };
 
 - (CParameters) convertToCParameters:(FlockSimulationParameters *) parameters {
-
     return CParameters(
                        parameters.speedLimit,
                        parameters.forceLimit,
