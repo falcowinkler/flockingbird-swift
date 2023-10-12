@@ -18,18 +18,18 @@ using CBoid = flockingbird :: Boid;
     return self;
 }
 
-- (instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY {
+- (instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY maxZ:(int) maxZ {
     self = [super init];
-    CFlock cFlock = CFlock(numberOfBoids, maxX, maxY);
+    CFlock cFlock = CFlock(numberOfBoids, maxX, maxY, maxZ);
     NSMutableArray<Boid*> *boids = [[NSMutableArray alloc] init];
     for (CBoid cBoid: cFlock.boids) {
         Boid *boid = [[Boid alloc]
                      initWithPosition:
                       [[Vector alloc]
-                       initWithX:cBoid.position.x y:cBoid.position.y]
+                       initWithX:cBoid.position.x y:cBoid.position.y z:cBoid.position.z]
                       velocity:
                       [[Vector alloc]
-                       initWithX:cBoid.velocity.x y:cBoid.velocity.y]];
+                       initWithX:cBoid.velocity.x y:cBoid.velocity.y z:cBoid.position.z]];
         [boids addObject:boid];
     }
     self.boids = boids;

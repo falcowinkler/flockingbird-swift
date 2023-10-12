@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -35,5 +35,5 @@ let package = Package(
             name: "flockingbird-swiftTests",
             dependencies: ["Flockingbird"])
     ],
-    cxxLanguageStandard: .gnucxx11
+    cxxLanguageStandard: .gnucxx17
 )

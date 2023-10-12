@@ -3,8 +3,8 @@ import XCTest
 
 final class FlockSimulationTests: XCTestCase {
     func testFlockSimulationInitialization() {
-        let flock = Flock(numberOfBoids: 100, maxX: 1024, maxY: 600)
-        let simulationParameters = FlockSimulationParameters(fromDict: ["maxX": 1024, "maxY": 600])
+        let flock = Flock(numberOfBoids: 100, maxX: 1024, maxY: 600, maxZ: 0)
+        let simulationParameters = FlockSimulationParameters(fromDict: ["maxX": 1024, "maxY": 600, "maxZ": 0])
         let flockSimulation = FlockSimulation(flock: flock, simulationParameters: simulationParameters)
         for boid in flockSimulation.currentFlock.boids {
             XCTAssertTrue(flock.boids.contains { $0.position.x == boid.position.x })

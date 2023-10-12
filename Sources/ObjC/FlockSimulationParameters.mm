@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "FlockSimulationParameters.h"
+#import "Vector.h"
+
 @implementation FlockSimulationParameters
 - (instancetype) initWithSpeedLimit:(float) speedLimit
                          forceLimit:(float) forceLimit
@@ -9,8 +11,13 @@
                    separationWeight:(float) separationWeight
                     alignmentWeight:(float) alignmentWeight
                      cohesionWeight:(float) cohesionWeight
+                    avoidanceWeight:(float) avoidanceWeight
+                    directionWeight:(float) directionWeight
+                             isTwoD:(bool) isTwoD
                                maxX:(float) maxX
-                               maxY:(float) maxY {
+                               maxY:(float) maxY
+                               maxZ:(float) maxZ
+                     targetPosition:(nullable Vector*) targetPosition {
     self = [super init];
     self.speedLimit = speedLimit;
     self.forceLimit = forceLimit;
@@ -20,8 +27,12 @@
     self.separationWeight = separationWeight;
     self.alignmentWeight = alignmentWeight;
     self.cohesionWeight = cohesionWeight;
+    self.avoidanceWeight = avoidanceWeight;
+    self.directionWeight = directionWeight;
     self.maxX = maxX;
     self.maxY = maxY;
+    self.maxZ = maxZ;
+    self.targetPosition = targetPosition;
     return self;
 }
 

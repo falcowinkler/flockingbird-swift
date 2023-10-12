@@ -9,25 +9,31 @@ final class FlockSimulationParametersTests: XCTestCase {
         XCTAssertEqual(flockSimulationParameters.maxY, 200)
         XCTAssertEqual(flockSimulationParameters.forceLimit, 0.03)
     }
-
+    
     func testDefaultInit() {
         let flockSimulationParameters = FlockSimulationParameters()
         XCTAssertEqual(flockSimulationParameters.forceLimit, 0.03)
     }
-
+    
     func testInitWithAllValues() {
         let flockingSimulationParameters =
-            FlockSimulationParameters(
-                speedLimit: 1,
-                forceLimit: 2,
-                positionIncrementScalingFactor: 3,
-                avoidanceRadius: 4,
-                visionRange: 5,
-                separationWeight: 6,
-                alignmentWeight: 7,
-                cohesionWeight: 8,
-                maxX: 9,
-                maxY: 10)
+        FlockSimulationParameters(
+            speedLimit: 1,
+            forceLimit: 2,
+            positionIncrementScalingFactor: 3,
+            avoidanceRadius: 4,
+            visionRange: 5,
+            separationWeight: 6,
+            alignmentWeight: 7,
+            cohesionWeight: 8,
+            avoidanceWeight: 1,
+            directionWeight: 1,
+            isTwoD: true,
+            maxX: 9,
+            maxY: 10,
+            maxZ: 11,
+            targetPosition: nil
+        )
         XCTAssertEqual(flockingSimulationParameters.speedLimit, 1)
         XCTAssertEqual(flockingSimulationParameters.forceLimit, 2)
         XCTAssertEqual(flockingSimulationParameters.positionIncrementScalingFactor, 3)

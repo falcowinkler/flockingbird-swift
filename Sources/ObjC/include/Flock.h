@@ -3,7 +3,7 @@
 
 @interface Flock : NSObject
 @property (nonatomic, nonnull, strong) NSArray<Boid*>* boids;
-- (nonnull instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY;
+- (nonnull instancetype) initWithNumberOfBoids:(int) numberOfBoids maxX:(int) maxX maxY:(int) maxY maxZ:(int) maxZ;
 - (nonnull instancetype) initWithBoids:(nonnull NSArray<Boid*>*) boids;
 - (nonnull instancetype) init;
 @end
